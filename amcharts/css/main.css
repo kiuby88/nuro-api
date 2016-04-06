@@ -1,0 +1,212 @@
+/*
+@copyright   Copyright (c) 2014, Nuromedia GmbH
+*/
+/* 
+    Created on : 22.07.2014, 16:48:05
+    Author     : Eduard Gotwig, Moritz Ackermann 
+*/
+            /* menu/nav css */
+
+            nav ul ul 
+            {
+                display: none;
+            }
+
+            nav ul li:hover > ul 
+            {
+                display: block;
+            }
+
+            nav {
+                display:inline-block;
+            }
+            
+            nav ul 
+            {
+                background: #efefef; 
+                box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+                padding: 0 20px;
+                border-radius: 10px;
+                list-style: none;
+                position: relative;
+                top: 3px;
+                display: inline-table;
+            }
+            nav ul:after 
+            {
+                content: ""; clear: both; display: block;
+            }
+
+
+            nav ul li 
+            {
+                float: left;
+            }
+            nav ul li:hover 
+            {
+                background: #4b545f;
+            }
+            nav ul li:hover a 
+            {
+                color: #fff;
+            }
+
+            nav ul li a 
+            {
+                display: block; padding: 2px 2px;
+                color: #757575; text-decoration: none;
+            }
+
+            nav ul ul 
+            {
+                background: #5f6975;
+                border-radius: 0px 0px 10px 10px;
+                padding: 0px;
+                position: absolute; top: 18px;
+            }
+            nav ul ul li 
+            {
+                float: none; 
+                border-top: 1px solid #6b727c;
+                border-bottom: 1px solid #575f6a;
+                position: relative;
+            }
+            nav ul ul li a 
+            {
+                padding: 10px 10px 10px 10px;
+                color: #fff;
+            }	
+            nav ul ul li a:hover 
+            {
+                background: #4b545f;
+            }
+
+            nav ul ul ul 
+            {
+                position: absolute; left: 100%; top:10px;
+            }
+
+            div.floating-menu {
+                float: left;
+                width: 70%;
+            }
+            
+            div.floating-menu a, div.floating-menu h3 {
+                display:block;
+                margin:0 0.5em;
+            }
+            
+            .menurow{
+                text-align:center;
+            }
+            
+            .boldit{
+                font-weight: bold;
+            }
+            
+            .changerinput{
+                width: 25px;
+            }
+            
+            #logo{
+                margin-left: auto; margin-right: 0px !important;
+                border: 2px solid;
+                border-radius: 0px 22px 0px 0px;
+                display: block;
+            }
+
+            .division{ 
+                display: table;
+                width: auto;
+                margin: 0 auto;
+            }
+            
+            .divisionline{
+                border-bottom: 1px solid black;
+            }
+            
+            .divisionresult{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            
+            #unapliedChanges{
+                position: fixed;
+                z-index: 90000;
+                margin-left: 50%;
+                color: red;
+                font-weight: bold;
+                display: none;
+            }
+            
+            .chartdiv{
+                height: 400px;
+            }
+            
+            #chartdiv1{
+                width: 50%; height: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                
+                white-space:nowrap
+            }
+            
+            #chartdiv9{
+                width: 49%
+            }
+            
+            .centerinfo{
+                text-align:center
+            }
+            
+            .shortchartdiv{
+                width:50%;
+                margin-left: -4px;
+                height: 400px; background-color: #FFFFFF;
+                display: inline-block;
+            }
+            
+            #filterOverview{
+                z-index: 1000;
+                border: 1px solid black;
+                border-radius: 4px;
+                background-color: #ffaa42;
+                position: fixed;
+                right: 2%;
+                top: 0%;
+                padding: 5px;
+            }
+            
+            #timeRangeDiv{
+                width: 200px; margin-left: auto;
+                margin-right: auto; white-space:nowrap;
+            }
+            
+            @media (max-width: 710px) {
+                    .shortchartdiv{width:100% !important}
+                    #filterOverview{display:none}
+	    }
+            
+            @media print { 
+                    div.floating-menu{
+                        display: initial;
+                    }
+                    
+                    .m-pikabu-viewport{
+                        display: none;
+                    }
+                    
+                    div.floating-menu span, label{
+                        color: black;
+                    }
+
+                    #chartdiv1{
+                        width: 100% !important;
+                    }
+                    
+                    #filterOverview{
+                        display:block;
+                        position:absolute;
+                    }
+                    
+                 }
